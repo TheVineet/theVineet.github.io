@@ -184,12 +184,12 @@
     </div>
 
     <div class="section-title">SUMMARY</div>
-    <p>Senior Software Engineer (5+ years) building B2B SaaS platforms from zero — async Python/FastAPI, PostgreSQL, Redis. Designs tenant isolation, authorization, caching, rate limiting, and background processing for a multi-tenant platform serving 10+ tenant accounts. Grew and now leads a 6-person engineering team while remaining the most hands-on contributor, shipping 70%+ of critical features. Delivers reliable releases through GitHub Actions CI/CD.</p>
+    <p>Backend engineer and tech lead with 5+ years building multi-tenant B2B SaaS platforms from zero — Python/FastAPI, PostgreSQL, Redis, and Celery — with a 99.9% uptime SLO and 10+ tenant accounts served. Most recently designed and shipped an LLM assistant layer on top of an ITSM platform: RAG over pgvector, MCP tool calling against scoped ITSM APIs, and guardrails with graceful handoff. Grew and leads a 6-person engineering team while remaining the most hands-on contributor, shipping 70%+ of critical features. Owns systems end-to-end — architecture, reliability, and the unglamorous infrastructure that makes AI features dependable in production.</p>
 
     <div class="section-title">EXPERIENCE</div>
 
     <div class="job-title">Tech Lead &amp; Full-Stack Engineer</div>
-    <div class="company">Alpinetech Business Solutions Pvt Ltd — Remote, India | Feb 2024 – August2026</div>
+    <div class="company">Alpinetech Business Solutions Pvt Ltd — Remote, India | Feb 2024 – August 2026</div>
     <ul class="job-details">
         <li>Joined as the first/sole engineer and built and shipped two B2B products — ticketing and asset management — from 0 to the first 2000 users</li>
         <li>Built asynchronous backend services with FastAPI, implementing Redis caching, API rate limiting, role-based access control (RBAC), audit logging, and background processing with Celery.</li>
@@ -197,6 +197,8 @@
         <li>Established GitHub Actions CI/CD workflows for automated testing and deployment and managed production infrastructure on DigitalOcean.</li>
         <li>Owned technical architecture, engineering roadmap, quarterly OKRs, technical debt, and production reliability, maintaining a 99.9% uptime SLO.</li>
         <li>Grew the engineering team from 1 to 6, leading hiring, onboarding, code reviews, mentoring, 1:1s, and technical development while remaining the primary hands-on engineer and delivering 70%+ of critical features.</li>
+        <li>Designed and built an <strong>LLM-powered conversational assistant</strong> on the ITSM platform — a Rufus-style chat surface for end users plus agent-assist for technicians — grounded through <strong>RAG</strong> over knowledge-base articles, resolved tickets, and runbooks on <strong>pgvector</strong>, with tenant- and role-aware filtering so retrieval respected existing RBAC; backed by Celery-based async embedding and re-indexing, streaming, and response caching to control latency and cost.</li>
+        <li>Built an <strong>MCP server</strong> exposing core ITSM APIs as tools — ticket creation, status transitions, and heavily filterable ticket search (date range, priority, keywords, requester, assignee, controller, technician, status) — letting the assistant turn natural-language questions into scoped queries plus semantic retrieval for any ticket the user had rights to, with human-in-the-loop confirmation on writes and a low-confidence fallback that offered to raise a ticket through the same tooling.</li>
     </ul>
 
     <div class="job-title">Founder &amp; Solo Developer</div>
@@ -216,14 +218,11 @@
         <li>Built asynchronous workflows with Celery for operations that should not block API requests.</li>
         <li>Implemented automated CI/CD using GitHub Actions and containerized application components with Docker.</li>
     </ul>
-    <!-- NOTE: consider replacing the two bullets above that overlap with the Experience
-         section with more specific technical detail (e.g. the exact caching strategy,
-         what the rate limiter keys on) once your Week 1 rate-limiter project vocabulary
-         is ready to drop in — see chat notes. -->
 
     <div class="section-title">TECHNICAL SKILLS</div>
     <div class="skill-line"><span class="skill-label">Languages:</span> Python, TypeScript, JavaScript, Dart, SQL</div>
     <div class="skill-line"><span class="skill-label">Backend:</span> FastAPI, Node.js, REST APIs, Async Python, Celery</div>
+    <div class="skill-line"><span class="skill-label">GenAI / LLM:</span> RAG, pgvector, Embeddings &amp; Semantic Search, LLM Integration, Prompt Engineering, Tool Calling (MCP), Agentic Workflows, Groundedness Evaluation &amp; Guardrails, LLM Cost/Latency Optimization</div>
     <div class="skill-line"><span class="skill-label">Databases &amp; Caching:</span> PostgreSQL, Redis</div>
     <div class="skill-line"><span class="skill-label">Architecture:</span> Multi-tenancy, RBAC, Caching, Rate Limiting, Background Processing, Audit Logging</div>
     <div class="skill-line"><span class="skill-label">Frontend:</span> Next.js, React, Flutter, Tailwind CSS, Ant Design</div>
