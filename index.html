@@ -165,7 +165,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="title">Senior Software Engineer</div>
+        <div class="title">Senior Software Engineer · Python &amp; GenAI</div>
         <h1>Vineet Pandey</h1>
         <div class="contact">
             Gurgaon, India<br>
@@ -184,7 +184,7 @@
     </div>
 
     <div class="section-title">SUMMARY</div>
-    <p>Backend engineer and tech lead with 5+ years building multi-tenant B2B SaaS platforms from zero — Python/FastAPI, PostgreSQL, Redis, and Celery — with a 99.9% uptime SLO and 10+ tenant accounts served. Most recently designed and shipped an LLM assistant layer on top of an ITSM platform: RAG over pgvector, MCP tool calling against scoped ITSM APIs, and guardrails with graceful handoff. Grew and leads a 6-person engineering team while remaining the most hands-on contributor, shipping 70%+ of critical features. Owns systems end-to-end — architecture, reliability, and the unglamorous infrastructure that makes AI features dependable in production.</p>
+    <p>Backend engineer and tech lead with 5+ years building multi-tenant B2B SaaS platforms from zero — Python/FastAPI, PostgreSQL, Redis, and Celery — with a 99.9% uptime SLO and 10+ tenant accounts served. Most recently designed and built an LLM assistant layer on top of an ITSM platform: RAG over pgvector, MCP tool calling against scoped ITSM APIs, and a low-confidence fallback into ticket creation. Grew and led a 6-person engineering team while remaining the most hands-on contributor, shipping 70%+ of critical features. Owns systems end-to-end — architecture, reliability, and the unglamorous infrastructure that makes AI features dependable in real-world use.</p>
 
     <div class="section-title">EXPERIENCE</div>
 
@@ -198,7 +198,8 @@
         <li>Owned technical architecture, engineering roadmap, quarterly OKRs, technical debt, and production reliability, maintaining a 99.9% uptime SLO.</li>
         <li>Grew the engineering team from 1 to 6, leading hiring, onboarding, code reviews, mentoring, 1:1s, and technical development while remaining the primary hands-on engineer and delivering 70%+ of critical features.</li>
         <li>Designed and built a <strong>conversational resolution assistant</strong> on the ITSM platform — a chat surface for end users — grounded through <strong>RAG</strong> over a curated Alpinetech troubleshooting knowledge base and each tenant's own resolved tickets on <strong>pgvector</strong>, with the ticket index tenant- and role-scoped at the database level so a company could only retrieve its own history. Backed by Celery-based async embedding and re-indexing, streaming, and response caching; when retrieval confidence was low, the assistant offered to raise a ticket through the same MCP tooling rather than guessing.</li>
-        <li>Built an <strong>MCP server</strong> exposing core ITSM APIs as tools — ticket creation, status transitions, and filterable ticket search (ID, date range, priority, keywords, requester, assignee, controller, technician, status) — powering natural-language querying of the <strong>KPI and reports</strong> surface ("show me ticket 123") and the assistant's fallback path. The model only mapped language to tool arguments; the API enforced permissions and filtering, so it could never widen its own access, and ticket creation required explicit user confirmation before anything was written.</li>    </ul>
+        <li>Built an <strong>MCP server</strong> exposing core ITSM APIs as tools — ticket creation, status transitions, and filterable ticket search (ID, date range, priority, keywords, requester, assignee, controller, technician, status) — powering natural-language querying of the <strong>KPI and reports</strong> surface ("show me ticket 123") and the assistant's fallback path. The model only mapped language to tool arguments; the API enforced permissions and filtering, so it could never widen its own access, and ticket creation required explicit user confirmation before anything was written.</li>
+    </ul>
 
     <div class="job-title">Founder &amp; Solo Developer</div>
     <div class="company">Bootstrapped Startup — India | Jan 2022 – Jan 2024</div>
@@ -221,7 +222,7 @@
     <div class="section-title">TECHNICAL SKILLS</div>
     <div class="skill-line"><span class="skill-label">Languages:</span> Python, TypeScript, JavaScript, Dart, SQL</div>
     <div class="skill-line"><span class="skill-label">Backend:</span> FastAPI, Node.js, REST APIs, Async Python, Celery</div>
-    <div class="skill-line"><span class="skill-label">GenAI / LLM:</span> RAG, pgvector, Embeddings &amp; Semantic Search, LLM Integration, Prompt Engineering, Tool Calling (MCP), Agentic Workflows, Groundedness Evaluation &amp; Guardrails, LLM Cost/Latency Optimization</div>
+    <div class="skill-line"><span class="skill-label">GenAI / LLM:</span> RAG, pgvector, Embeddings &amp; Semantic Search, LLM Integration, Prompt Engineering, Tool Calling (MCP), Agentic Workflows, Guardrails &amp; Human-in-the-Loop Confirmation, LLM Cost/Latency Optimization</div>
     <div class="skill-line"><span class="skill-label">Databases &amp; Caching:</span> PostgreSQL, Redis</div>
     <div class="skill-line"><span class="skill-label">Architecture:</span> Multi-tenancy, RBAC, Caching, Rate Limiting, Background Processing, Audit Logging</div>
     <div class="skill-line"><span class="skill-label">Frontend:</span> Next.js, React, Flutter, Tailwind CSS, Ant Design</div>
